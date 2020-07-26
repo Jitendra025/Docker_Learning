@@ -1,0 +1,23 @@
+
+1.Create account on DockerHub, mynuser name is jitendra0625 on Docker hub, password jmg123456
+2. Create a repository on docker hub, I have created with the name jitendra0625
+----steps to push the image on docker hub
+3. Open the DockerCLI ( Open kitematic and in the left bottom corner, there you can see DockerCli)
+4 Write the follwoing command to login to docker hub and press enter:
+  docker login --username = <Docker Hub User name> -> this will ask for password in next line
+  Login Password -> enter Docker hub password
+5. To Push command to docker hub njow write the follwing command
+  docker tag <dockerhub username>/<repository name>: <tag name> . I have giventag name as firsttry
+  docker push <dockerhub username>/<repository name> this command will push the image on docker (can check by loging)
+6. Want to pull that imnage on any other machine write below command
+    docker run  -p 8080:80 <dockerhub username>/<repository name>: <tag name> (might need to login to docker hub is not already)
+ -p 8080 here is we want our container to run on port 8080
+now run localhost:8080 in browser and hurrey your docker image is running
+Note: I have created the docker file from windows machine and pushed that too docker hub from there. and now pull that image from docker hub to ubuntu virtual machine to run the same image in ubuntu 
+
+Just to add info: To access the app running on your virtual machine we just installer from your host machine
+1. Just add the ip of virtual machine along with the port 8080 on which our container is runing inhost machine host file
+add as below
+virtaulmachine IP:8080 machine_name 
+
+ 

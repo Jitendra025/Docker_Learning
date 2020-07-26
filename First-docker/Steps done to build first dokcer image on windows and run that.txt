@@ -1,0 +1,19 @@
+1. Created a default webapplication hello world from visual studio
+2. Solution located in C:\Users\WebApplication2
+3. Installed Docker Toollbox for my Windows 10 home version 1909
+4. Docker Toolbox will install Oracle VirtualBox, DockerQuickStartTerminal and Kitematic(Alpha)
+5. Open the DockerQuickStartTerminal and run command docker run hello-world . This commad wil pull the default hello-world image from docker hub (This image is not for my project)
+6. Add support of docker in visual studio solution will add a Dockerfile in the solution, it will add default code to build docker image
+7. Now go to DockerQuickStartTerminal  and run comand docker build path of the .csproj file C:\Users\WebApplication2\WebApplication2 in my case. Dockerfile should be one level up from .csproj i.e. C:\Users\WebApplication2
+8. The above command will build the solution and will create one image
+9. Run docker-machine ip to get the ip of machine running on virtualbox (199.168.99.100)
+9. Now run the commad docker run <imagename> (image name built in previous step)
+10. The above step will start the container
+11. Open your browser and run command 192.168.99.100:80 to see your site
+12. The site will not launch :)
+13. Open Kitematic(Alpha)
+14. Check your running container
+15. Go to settings->Hostname/ports
+16. see section Configure ports and in the Publish Ip:port add port 80 (port shows when command docker run was executed)
+17. See images with name kitematic for changes in kitematic
+18. Also add IP of docker-machine in may case  199.168.99.100. Add 199.168.99.100 docker-host in host file of windows 10 machine
