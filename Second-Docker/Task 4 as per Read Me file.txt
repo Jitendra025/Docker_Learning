@@ -1,0 +1,10 @@
+To accompolish Task 4 do below:
+1. Build web api docker image and trun in container (expose port 80 on 8080)
+ Make sure Docker desktop is running and open Powershell
+ run command:
+docker build <path of Webapi.csproj>
+docker run -p 8080:80 <image name built in above step>
+
+in browser run http://localhost:8080/weatherforecast
+
+In First_MVC add the above url in appsetting.json file

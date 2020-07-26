@@ -1,0 +1,8 @@
+Tasks
+1. Create WebAPi in VS2019 (solution name WebAPI created)
+2. Create MVC Core in VS 2019(Solution name First_MVC) created
+3. Run webapi in docker container after building image
+4. Use webapi url runing in docker in MVC where MVC is runing in IISExpress from VS2019. URL of WebAPI is in appsetting.json file of MVC.
+
+Next Task: 
+5. Run Web API in docker and consume in MVC that is also running in another docker container.
