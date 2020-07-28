@@ -1,0 +1,29 @@
+7. Run web api in docker on ubuntu machine and mvc application in docker on windows machine where mvc is consuming the webapi form ubuntu
+
+Steps:
+1. Create docker image of WebAPI
+docker build <path of Webapi.csproj> -t jitendra0625/webapidemo:latest
+Note: here jitendra0625 is my id on docker hub, webapidemo is the image name and latest is the tag name
+2. Push the image on docker
+docker push jitendra0625/webapidemo:latest
+
+3. Create the image for mvc
+docker build <path of Webapi.csproj> -t jitendra0625/mvcdemo_ubuntu:latest
+push the image on docker
+Note: when running the application on windows the url for webapi in mvc config file will be :http://ubuntu:8080/weatherforecast
+note on host.docker.internal, if this will be localhost error will come that no address assgined (reason not known yet)
+on ubutu host.docker.internal as well will not work
+
+4. Run the webapi in image in different docker container on ubuntu
+docker run -p 8000:8000 jitendra0625/webapidemo:latest
+5.Run the mvc image in different docker container on windows app
+docker run -p 5000:5000 jitendra0625/mvcdemo:latest
+
+Note: here the path webapi and mvc are running on different containers but on same machine
+The url of webapi is alredy added in config file of mvc "http://ubuntu:8000/weatherforecast",
+
+Host file entry of windows 
+ubuntu IP ubuntu machine name
+192.168.159.128 ubuntu
+
+access mvc on windows localhost:5000

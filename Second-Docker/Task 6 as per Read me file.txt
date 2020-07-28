@@ -1,4 +1,4 @@
-Run Web API in docker and consume in MVC running in same docker-composer.
+Run Web API in docker and consume in MVC both running in different docker containers.
 
 Steps:
 1. Create docker image of WebAPI
@@ -14,14 +14,10 @@ Note: when running the application on windows the url for webapi in mvc config f
 note on host.docker.internal, if this will be localhost error will come that no address assgined (reason not known yet)
 on ubutu host.docker.internal as well will not work
 
-4. Create the docker-compose.yml file . copied in this directory for reference
-5. go to the directory where docker-compose.yml file exists and then run docker-compose up
- thats it your applications are running in docker compose. and mvc will be invoking the webapi.
+4. Run the webapi in image in different docker container
+docker run -p 8000:8000 jitendra0625/webapidemo:latest
+5.Run the mvc image in different docker container
+docker run -p 5000:5000 jitendra0625/mvcdemo:latest
 
-though this is not working in ubutnu yet, even replcaing localhost with host.docker.internal in api url in mvc
-
-got the solution of above problem on ubuntu
-need to add 
-Ubuntu machine IP and host.docker.internal in host file
-sample ip only
-192.168.121.12 host.docker.internal
+Note: here the path webapi and mvc are running on different containers but on same machine
+The url of webapi is alredy added in config file of mvc "http://host.docker.internal:8000/weatherforecast",

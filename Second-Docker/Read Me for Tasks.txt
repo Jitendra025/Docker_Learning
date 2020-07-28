@@ -5,4 +5,7 @@ Tasks
 4. Use webapi url runing in docker in MVC where MVC is runing in IISExpress from VS2019. URL of WebAPI is in appsetting.json file of MVC.
 
 Next Task: 
-5. Run Web API in docker and consume in MVC that is also running in another docker container.
+5. Run Web API in docker and consume in MVC that where both are running in same docker compose.
+6. Run Web API in docker and consume in MVC where both are running in different docker containers
+7. Run web api in docker on ubuntu machine and mvc application in docker on windows machine where mvc is consuming the webapi form ubuntu
+
