@@ -1,5 +1,5 @@
 
-1.Create account on DockerHub, mynuser name is jitendra0625 on Docker hub, password jmg123456
+1.Create account on DockerHub, mynuser name is jitendra0625 on Docker hub, 
 2. Create a repository on docker hub, I have created with the name jitendra0625
 ----steps to push the image on docker hub
 3. Open the DockerCLI ( Open kitematic and in the left bottom corner, there you can see DockerCli)
