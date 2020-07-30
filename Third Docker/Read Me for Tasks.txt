@@ -1,0 +1,13 @@
+Tasks
+1. Create WebAPi in VS2019 (solution name WebAPI created) --We will be using the same application which we used for second docker. 
+Git hub location for visual studio code:
+https://github.com/Jitendra025/Visual-Studio
+
+2. Create MVC Core in VS 2019(Solution name First_MVC) created placed in above git location
+3. Run webapi in docker container after building image
+4. Create one database and a table which will be consumed by WebAPI and weali will be consumed by MVC
+
+Next Task: 
+5. Run Web API in docker using database from my windows 10 machine and then webapi consume in MVC where both are running in different docker containers
+6. Run Web API in docker using database from my windows 10 machine and then webapi consume in MVC where where mvc is consuming the webapi form ubuntu
+
